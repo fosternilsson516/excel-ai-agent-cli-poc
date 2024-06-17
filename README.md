@@ -8,25 +8,25 @@ This command-line interface (CLI) tool leverages the power of large language mod
 - **Step-by-Step Guidance:** The tool suggests actions to take based on your query.
 - **Pandas Code Generation:**  Enter "g" (for generate) to get a custom Pandas script to perform the suggested actions.
 - **Safe, Local Execution:** The Pandas script runs within your environment, keeping your data private and secure.
-- **Metadata-Driven Prompts:**  The tool intelligently extracts metadata from your Excel file to create concise and effective prompts for the LLM, resulting in efficient interactions.
+- **Metadata-Driven Prompts:**  The tool intelligently uses extracted metadata from your Excel file to create concise and effective prompts for the LLM, resulting in efficient interactions.
 
 ### How It Works
 
 1. **File Path Input:** You'll be prompted to enter the full path to your Excel file.
 2. **Query Input:**  Describe what you want to do with your data (e.g., "Calculate the average sales for each region").
 3. **Suggested Steps:** The tool will provide a series of steps it thinks are necessary to fulfill your request.
-4. **Generate Pandas Script:** If you're satisfied with the steps, type "g" and the tool will generate a Pandas script tailored to your query.
+4. **Generate Pandas Script:** If you're satisfied with the steps, type "g", then enter and the tool will generate a Pandas script tailored to your query. If you don't think the steps cover what you want to achieve, rewrite the query with your added updates/changes.
 5. **Local Execution:** The generated script runs within your Python environment, manipulating your Excel data directly.
 
 ### Installation and Setup
 
 1. **Prerequisites:**
    - Python (3.x recommended)
-   - Gemini API key (sign up for free tokens)
+   - Gemini API key [get your own free api key here](https://ai.google.dev/gemini-api)
 
 2. **Clone Repository:**
    ```bash
-   git clone [https://github.com/your_username/excel-agents-bot.git](https://github.com/your_username/excel-agents-bot.git) 
+   git clone https://github.com/fosternilsson516/excel-ai-agent-cli-poc.git
 
 3.  **Virtual Environment:**
 
@@ -34,14 +34,12 @@ This command-line interface (CLI) tool leverages the power of large language mod
     python -m venv venv
     venv\Scripts\activate  # On Windows
     source venv/bin/activate  # On macOS/Linux
-    Use code with caution.
     ```
 
 4.  **Install Dependencies:**
 
     ```bash
     pip install -r requirements.txt
-    Use code with caution.
     ```
 
 5.  **Set Up Environment Variables:**
@@ -59,19 +57,17 @@ This command-line interface (CLI) tool leverages the power of large language mod
     ```bash
     venv\Scripts\activate  # On Windows
     source venv/bin/activate  # On macOS/Linux
-    Use code with caution.
     ```
 
 2.  **Run the CLI:**
 
     ```bash
-    python app.py
-    Use code with caution.
+    python main.py
     ```
 
 ### Future Plans
 
-Excel Integration: Use openpyxl or xlwings to directly write results back to the original Excel file or enable real-time manipulation.
+Excel Integration: Currently use openpyxl  (may use xlwings in the future for real-time manipulation) to directly write results back to the original Excel file.
 File Format Expansion: Integrate Apache Tika to support a wider range of file types for metadata extraction.
 
 ### Contributing
@@ -84,6 +80,6 @@ This project is a prototype and should not be used for sensitive or critical dat
 
 ---
 
-**Author:** Your Name
+**Author:** Foster Nilsson
 
 **License:** GNU General Public License v3.0 (GPLv3)   
